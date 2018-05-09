@@ -1,8 +1,9 @@
 # Todo
 
 - Docker exec in soletic container and git clone trellotuto
+- Verifier https et rediriger toujours vers çà
 - Allow target in link et vérifier qui chaque lien fonctionne
-- Past menu
+- [OK] Past menu
  
   ```
   Accueil

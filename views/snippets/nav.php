@@ -1,10 +1,5 @@
 <?php global $libreto ?>
 <nav>
-  <ul class="helpers">
-    <li class='switcher_button <?= $_SESSION['mode'] == 'read' ? 'active' : ''; ?>'><a href="?mode=read"><?= l("read", false) ?></a></li>
-    <li class='switcher_button <?= $_SESSION['mode'] == 'write' ? 'active' : ''; ?>'><a href="?mode=write"><?= l("write", false) ?></a></li>
-    <li class='' style="flex: 0;"><a href='' class="refresh" data-name-encoded='' alt='<?= l("update", false) ?>'>↻</a></li>
-  </ul>
   <ul class="menu">
 
     <?php foreach ($libreto->pads()->children() as $pad): ?>
