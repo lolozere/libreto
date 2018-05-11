@@ -23,7 +23,7 @@
     <li class=""><a href='/bindery/<?= $libreto->name() ?>' class="" data-name-encoded=''><?= l("export", false) ?></a></li>
     <li class=""><a href='/export/<?= $libreto->name() ?>' class="" data-name-encoded='' download><?= l("download", false) ?></a></li>
   </ul>
-  <?php elseif ($libreto->options('write_secret') && !isset($_SESSION['write_edition']) && $_SESSION['write_edition']): ?>
+  <?php elseif ($libreto->options('write_secret') && (!isset($_SESSION['write_edition']) || !$_SESSION['write_edition'])): ?>
   <ul class="helpers">
     <li class=""><a href='/edit-activation' class="" data-name-encoded=''><?= l("write", false) ?></a></li>
   </ul>
