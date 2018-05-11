@@ -98,6 +98,8 @@ class Libreto
           } elseif (isset($_POST['key'])) {
             header('Location: /edit-activation?bad=1' );
             exit;
+          } else {
+            return;
           }
         }
         $_SESSION['mode'] = 'write';
