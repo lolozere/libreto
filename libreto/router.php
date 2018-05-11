@@ -14,7 +14,7 @@ class Router
   public function split() {
 
     // directories
-    $directories = explode( '/', trim($_SERVER['REQUEST_URI'], '/') );
+    $directories = explode( '/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/') );
     $this->directories = array_filter(array_map("urldecode", $directories));
 
     // subdomain
@@ -43,7 +43,8 @@ class Router
         return "libreto";
       endif;
     else:
-      return "home";
+      header('Location: /site/');
+      exit();
     endif;
   }
 

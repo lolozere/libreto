@@ -89,8 +89,17 @@ class Libreto
     if (!isset($_SESSION['mode'])) {
       $_SESSION['mode'] = 'read';
     }
-    if(isset($_GET['mode'])):
-      if($_GET['mode'] == "write") :
+    if(isset($_REQUEST['mode'])):
+      if($_REQUEST['mode'] == "write"):
+        // If write secret, check it
+        if (!empty($this->options('write_secret'))) {
+          if (isset($_POST['key']) && $_POST['key'] == $this->options('write_secret')) {
+            $_SESSION['write_edition'] = true; // Active edition rights for all the session
+          } elseif (isset($_POST['key'])) {
+            header('Location: /edit-activation?bad=1' );
+            exit;
+          }
+        }
         $_SESSION['mode'] = 'write';
       else :
         $_SESSION['mode'] = 'read';
