@@ -156,6 +156,10 @@ article.loading iframe {
 	opacity: 0;
 }
 
+article .reader-pane {
+
+}
+
 ul, li {
   margin: 0;
   padding: 0;
