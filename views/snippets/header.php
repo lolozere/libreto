@@ -11,6 +11,7 @@ endif;
 <head>
   <meta charset="utf-8">
   <title><?= $title;?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/belgica-belgika" type="text/css"/>
   <link rel="stylesheet" href="/libreto/assets/style.css?0.1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
