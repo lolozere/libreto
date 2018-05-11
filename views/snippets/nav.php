@@ -12,7 +12,7 @@
     <?php foreach ($libreto->pads()->children() as $pad): ?>
 
       <li class='pad_button <?= $pad->selected() ? "active" : false ?> <?= $pad->type() ?>'>
-        <a href='<?= $pad->url() ?>' target='myframe' style='color: <?= $pad->color() ?>' data-name='<?= $pad->name(); ?>' data-name-encoded='<?= urlencode(strtolower($pad->name())) ?>'><?= $pad->name() ?></a>
+        <a href='<?= $pad->url('url') ?>' style='color: <?= $pad->color() ?>' data-name='<?= $pad->name(); ?>' data-name-encoded='<?= urlencode(strtolower($pad->name())) ?>'><?= $pad->name() ?></a>
       </li>
 
     <?php endforeach; ?>

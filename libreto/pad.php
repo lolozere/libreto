@@ -73,6 +73,7 @@ class Pad
     $this->url = array(
       "pad"       => $url . $libreto->options('pads_params'),
       "reader"    => "/reader/" . urlencode($libreto->name()) . '/' . urlencode($this->name),
+      "url"       => "/" . urlencode($libreto->name()) . '/' . urlencode($this->name),
       "txt"       => $url . "/export/txt",
       "markdown"  => $url . "/export/markdown",
       "html"      => $url . "/export/html",
