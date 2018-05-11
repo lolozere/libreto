@@ -1,4 +1,4 @@
-<?php 
+<?php
 global $libreto;
 $title = "Trello Tuto";
 /** @var Pad $pad */
