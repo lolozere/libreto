@@ -99,10 +99,11 @@ class Libreto
             header('Location: /edit-activation?bad=1' );
             exit;
           } else {
-            return;
+            $_SESSION['mode'] = 'read';
           }
+        } else {
+          $_SESSION['mode'] = 'write';
         }
-        $_SESSION['mode'] = 'write';
       else :
         $_SESSION['mode'] = 'read';
       endif;
