@@ -11,9 +11,9 @@ endif;
 <head>
   <meta charset="utf-8">
   <title><?= $title;?></title>
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/belgica-belgika" type="text/css"/>
+  <link rel="stylesheet" media="screen" href="//fontlibrary.org/face/belgica-belgika" type="text/css"/>
   <link rel="stylesheet" href="/libreto/assets/style.css?0.1.0">
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="/libreto/assets/script.js"></script>
 </head>
 <body>
