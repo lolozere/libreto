@@ -4,14 +4,13 @@ if (!$libreto->pads()->selected()):
     header('Location: ?mode=write');
     return;
 endif;
-
+$iframe = $libreto->pads()->selected()->url();
 snippet('header'); ?>
-<div id="container">
+<div id="container" class="<?php echo (($_SESSION['mode'] == 'write' || $iframe[0] != '/')?'frame':'section'); ?>">
     <?php snippet('introduction') ?>
     <?php snippet('nav') ?>
     <article>
         <?php
-        $iframe = $libreto->pads()->selected()->url();
         if ($_SESSION['mode'] == 'write' || $iframe[0] != '/'):?>
         <iframe id="framepad" name="myframe" width=600 height=400 src="<?= $iframe ?>"></iframe>
         <?php else:

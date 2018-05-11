@@ -7,7 +7,7 @@
       <li class='' style="flex: 0;"><a href='' class="refresh" data-name-encoded='' alt='<?= l("update", false) ?>'>↻</a></li>
   </ul>
   <?php endif;?>
-  <ul class="menu">
+  <ul class="menu" id="site-menu">
 
     <?php foreach ($libreto->pads()->children() as $pad): ?>
 

@@ -28,4 +28,8 @@ $(document ).ready( function() {
     $.post("/assets/ajax.php", {"action": "headerVisibility", "visibility": "open"});
   });
 
+  $('#btn-menu').click(function(){
+      $($(this).attr('href')).toggle();
+  });
+
 });

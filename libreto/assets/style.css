@@ -150,6 +150,10 @@ nav {
 article {
   flex: 3;
 	z-index: 1;
+
+}
+#container.section article {
+	overflow-y: scroll;
 }
 
 article.loading iframe {
@@ -304,3 +308,21 @@ header > div > .switch {
   line-height: 0;
   cursor: pointer;
 }
+
+#btn-menu { display: none; }
+
+@media screen and (max-width: 700px) {
+	#container {
+		flex-direction: column;
+	}
+	header .libreto_name {
+		transform: none;
+		position: relative;
+	}
+	header { border-bottom: 1px solid #ddd; }
+	nav ul.helpers { display: none; }
+	#site-menu { display: none; }
+	nav { flex: none; }
+	#btn-menu { display: block; float: right; padding: 4px; border: 1px solid #ddd; border-radius: 4px; margin: 4px; }
+}
+
